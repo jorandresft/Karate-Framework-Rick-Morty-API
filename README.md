@@ -168,6 +168,33 @@ Para ejecutar los casos de prueba según el ambiente, abrir una ventana cmd en l
   gradle test --tests ParallelTest -Dkarate.env=preproductive -DbaseUrl=https://rickandmortyapi.com/api/ -i
 ```
 
+## Github Actions
+
+Crear las carpetas .github/workflows y dentro crear el archivo .yml con la siguiente estructura
+
+```bash
+Ej:
+name: Karate Test Runner
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: API Test
+        run: gradle test --tests ParallelTest -Dkarate.env=preproductive -DbaseUrl=https://rickandmortyapi.com/api/ -i
+```
+
+Cada vez que se realice un push se realizara una ejecución de los test
+
 ## Authors
 
 - Jorge Franco
