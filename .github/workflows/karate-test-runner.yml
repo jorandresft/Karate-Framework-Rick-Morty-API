@@ -1,8 +1,8 @@
 name: Karate Test Runner
 
-on: [ push ]
+on: [push]
 
-Jobs:
+jobs:
   build:
     runs-on: ubuntu-latest
 
