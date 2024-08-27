@@ -25,7 +25,7 @@ public class ParallelTest {
         Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[]{"json"}, true);
         List<String> jsonPaths = new ArrayList<>(jsonFiles.size());
         jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
-        Configuration config = new Configuration(new File("build"), "Karate-Framework-Rick-Morty-API");
+        Configuration config = new Configuration(new File("build"), "Karate-Framework-Rick-Morty-APIs");
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
     }
