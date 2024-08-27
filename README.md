@@ -195,6 +195,10 @@ jobs:
 
 Cada vez que se realice un push se realizara una ejecución de los test
 
+```bash
+En el proyecto ir a Actions y se veran todos los All workflows
+```
+
 ## Authors
 
 - Jorge Franco
