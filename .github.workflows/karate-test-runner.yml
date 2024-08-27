@@ -14,4 +14,4 @@ Jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: API Test
-        run: gradle clean test
+        run: .gradle clean test
